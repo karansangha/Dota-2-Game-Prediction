@@ -1,0 +1,11 @@
+Sven,Lone Druid,Venomancer,Clockwerk,Shadow Shaman,Invoker,Gyrocopter,Anti-Mage,Alchemist,Slark,2
+Riki,Tinker,Puck,Leshrac,Nyx Assassin,Slardar,Sand King,Spectre,Necrolyte,Warlock,1
+Invoker,Mirana,Pudge,Magnus,Keeper of the Light,Rubick,Tidehunter,Queen of Pain,Faceless Void,Sniper,2
+Riki,Centaur Warrunner,Treant Protector,Queen of Pain,Broodmother,Rubick,Weaver,Troll Warlord,Alchemist,Drow Ranger,1
+Razor,Kunkka,Drow Ranger,Leshrac,Zeus,Riki,Bane,Visage,Invoker,Timbersaw,1
+Sand King,Shadow Shaman,Silencer,Gyrocopter,Meepo,Nyx Assassin,Slark,Mirana,Rubick,Queen of Pain,2
+Morphling,Omniknight,Pudge,Crystal Maiden,Razor,Troll Warlord,Tidehunter,Lina,Dark Seer,Gyrocopter,1
+Brewmaster,Leshrac,Ogre Magi,Kunkka,Riki,Disruptor,Juggernaut,Tiny,Enigma,Bounty Hunter,1
+Slardar,Earthshaker,Invoker,Slark,Doom,Necrolyte,Timbersaw,Bounty Hunter,Huskar,Razor,1
+Dazzle,Naga Siren,Ogre Magi,Pudge,Nature's Prophet,Chen,Puck,Timbersaw,Magnus,Ursa,2
+Wisp,Sven,Pudge,Broodmother,Lion,Puck,Lone Druid,Doom,Batrider,Chaos Knight,1
