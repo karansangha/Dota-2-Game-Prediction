@@ -1,4 +1,4 @@
-Dota_2_Game_Prediction
+DOTA 2 Game Prediction
 ======================
 
 DOTA 2 Game Prediction [Hacker Rankk]
