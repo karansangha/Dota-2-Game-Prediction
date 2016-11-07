@@ -57,40 +57,48 @@ while (i<len(theList)):
     i+=1
 
 #Split the training data
-from sklearn.cross_validation import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(dataChampions, dataWinners, test_size = 0.99)
+# from sklearn.cross_validation import train_test_split
+# X_train, X_test, y_train, y_test = train_test_split(dataChampions, dataWinners, test_size = 0.99)
 
 #Import the classifier
 from sklearn import tree
 my_classifier = tree.DecisionTreeClassifier()
 
 #Train the classifer
-my_classifier.fit(X_train, y_train)
+my_classifier.fit(dataChampions, dataWinners)
 
 #Test the classifer
-predictions = my_classifier.predict(X_test)
+# predictions = my_classifier.predict(dataChampions)
+# print predictions
 
-#Print predictions
-from sklearn.metrics import accuracy_score
-print accuracy_score(y_test, predictions)
+# Test accuracy
+# from sklearn.metrics import accuracy_score
+# print accuracy_score(y_test, predictions)
 
 #### BEGIN TESTING THE ALGORITHM ####
 
-# inp = int(raw_input())
-# k = 0
-# inputList = []
-# while (k<inp):
-#     line = raw_input()
-#     inputList.append(line)
-#     k+=1
-#
+inp = int(raw_input())
+k = 0
+inputList = []
+while (k<inp):
+    line = raw_input()
+    inputList.append(line)
+    k+=1
+
 # team1Score = 0
 # team2Score = 0
-#
-# j = 0
-# while (j<len(inputList)):
-#     teamChampions = inputList[j].split(',')
-#     z = 0
+
+j = 0
+testChampions = []
+
+while (j<len(inputList)):
+    stringChampions = inputList[j].split(',')
+    intChampions = []
+    z = 0
+    while (z<10):
+        intChampions.append(db[stringChampions[z]])
+        z+=1
+    testChampions.append(intChampions)
 #     while (z<5):
 #         team1Score+=db[teamChampions[z]]
 #         z+=1
@@ -104,4 +112,10 @@ print accuracy_score(y_test, predictions)
 #         print "2"
 #     team1score = 0
 #     team2score = 0
-#     j+=1
+    j+=1
+
+predictions = my_classifier.predict(testChampions)
+i = 0
+while (i<len(predictions)):
+    print predictions[i]
+    i+=1
