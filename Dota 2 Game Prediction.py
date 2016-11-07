@@ -43,7 +43,6 @@ while (i<len(theList)):
 i = 0
 dataChampions = []
 dataWinners = []
-print theList[i].split(',')
 
 while (i<len(theList)):
     data = []
@@ -57,7 +56,23 @@ while (i<len(theList)):
     dataChampions.append(data)
     i+=1
 
-print dataChampions
+#Split the training data
+from sklearn.cross_validation import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(dataChampions, dataWinners, test_size = 0.99)
+
+#Import the classifier
+from sklearn import tree
+my_classifier = tree.DecisionTreeClassifier()
+
+#Train the classifer
+my_classifier.fit(X_train, y_train)
+
+#Test the classifer
+predictions = my_classifier.predict(X_test)
+
+#Print predictions
+from sklearn.metrics import accuracy_score
+print accuracy_score(y_test, predictions)
 
 #### BEGIN TESTING THE ALGORITHM ####
 
