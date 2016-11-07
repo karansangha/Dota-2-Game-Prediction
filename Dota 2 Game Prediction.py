@@ -38,8 +38,26 @@ while (i<len(theList)):
             j+=1
     i+=1
 
-##### DATABASE CREATION COMPLETED ####
-print db
+# print db
+
+i = 0
+dataChampions = []
+dataWinners = []
+print theList[i].split(',')
+
+while (i<len(theList)):
+    data = []
+    champions = theList[i].split(',')
+    winner = champions.pop()
+    dataWinners.append(winner)
+    j=0
+    while(j<len(champions)):
+        data.append(db[champions[j]])
+        j+=1
+    dataChampions.append(data)
+    i+=1
+
+print dataChampions
 
 #### BEGIN TESTING THE ALGORITHM ####
 
