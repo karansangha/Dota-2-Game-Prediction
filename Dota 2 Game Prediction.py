@@ -1,12 +1,12 @@
 from sklearn import tree
 
 # Open the file and read in data from that.
-liopen = open("trainingdata.txt")
+training_data_file = open("trainingdata.txt")
 theList = []
-for entry in liopen:
+for entry in training_data_file:
     entry = entry.strip()
     theList.append(entry)
-liopen.close()
+training_data_file.close()
 
 # Initialize a dictionary
 db = dict()
@@ -15,9 +15,7 @@ db = dict()
 i = 0
 count = 0
 
-"""
-    Each champion is assigned a unique id
-"""
+# Each champion is assigned a unique id
 while i < len(theList):
     if '1' in theList[i]:  # If team 1 wins
         champions = theList[i].split(',')
@@ -39,8 +37,6 @@ while i < len(theList):
                 count += 1
             j += 1
     i += 1
-
-# print db
 
 i = 0
 dataChampions = []
@@ -65,10 +61,7 @@ my_classifier = tree.DecisionTreeClassifier()
 # Train the classifier
 my_classifier.fit(dataChampions, dataWinners)
 
-"""
-    BEGIN TESTING THE ALGORITHM
-"""
-
+# Test the algorithm
 inp = int(input())
 k = 0
 inputList = []
@@ -91,8 +84,7 @@ while j < len(inputList):
     j += 1
 
 predictions = my_classifier.predict(testChampions)
-i = 0
 
-while i < len(predictions):
-    print(predictions[i])
-    i += 1
+# Print the results
+for prediction in predictions:
+    print(prediction)
